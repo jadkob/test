@@ -5,8 +5,7 @@ const pool = mysql.createPool({
     host: "sql6.freesqldatabase.com",
     user: "sql6693982",
     password: "2011",
-    //@ts-ignore
-    name: `sql6693982`,
+    database: `sql6693982`,
 
 })
 export async function GET() {
