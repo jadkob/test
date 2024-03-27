@@ -9,7 +9,7 @@ const pool = mysql.createPool({
 
 })
 export async function GET() {
-    let users = []
+    let users: any = []
     pool.getConnection((error, connection) => {
         if (error) {
             return Response.json(error)
