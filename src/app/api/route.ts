@@ -21,5 +21,6 @@ export async function GET() {
                 }
             })
         }
+        connection.release()
     })
 }
