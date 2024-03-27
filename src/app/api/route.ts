@@ -9,6 +9,7 @@ const pool = mysql.createPool({
 
 })
 export async function GET() {
+    let users = []
     pool.getConnection((error, connection) => {
         if (error) {
             return Response.json(error)
@@ -19,12 +20,12 @@ export async function GET() {
                 }else {
                     console.log(rows)
 
-                    return Response.json(rows)
+                    users = rows
                 }
             })
         }
         connection.release()
     })
-    return new Response("hi")
+    return Response.json(users)
 
 }
