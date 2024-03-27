@@ -17,6 +17,8 @@ export async function GET() {
                 if (err) {
                     return Response.json(error)
                 }else {
+                    console.log(rows)
+
                     return Response.json(rows)
                 }
             })
